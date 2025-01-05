@@ -1,0 +1,48 @@
+/* Container for Navigation Buttons */
+.nav-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive layout */
+  gap: 10px; /* Spacing between buttons */
+  padding: 10px;
+  justify-items: center; /* Centers buttons within each grid cell */
+  align-items: center; /* Centers buttons vertically within the grid */
+}
+
+/* Individual Button */
+.nav-button {
+  display: flex;
+  flex-direction: row; /* Icon on the left, text on the right */
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  gap: 8px; /* Space between icon and text */
+  padding: 10px;
+  width: 100%; /* Fills the grid cell */
+  aspect-ratio: 1; /* Makes the buttons square */
+}
+
+/* Hover effect on buttons */
+.nav-button:hover {
+  background-color: #e1e1e1;
+  color: #007bff;
+}
+
+/* Active button style */
+.nav-button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Button Icon Styling */
+.nav-button img {
+  width: 24px; /* Standard icon size */
+  height: 24px;
+  object-fit: contain; /* Prevents distortion */
+}
