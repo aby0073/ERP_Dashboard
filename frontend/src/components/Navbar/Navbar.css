@@ -6,11 +6,13 @@
   background-color: #f9fcff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
+  flex-wrap: wrap;
 }
 
 .logo-section {
   display: flex;
   align-items: center;
+  flex: 1;
 }
 
 .logo-icon {
@@ -23,6 +25,7 @@
   font-size: 18px;
   font-weight: bold;
   color: #333;
+  cursor: pointer;
 }
 
 .search-bar input {
@@ -40,10 +43,13 @@
   border-color: #007bff;
 }
 
+/* Right Section */
 .right-section {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .switch-company-button {
@@ -66,16 +72,32 @@
   align-items: center;
   cursor: pointer;
   position: relative;
-  gap: 10px;
 }
 
-.dropdown-username {
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.welcome-text {
   font-size: 14px;
   font-weight: 500;
   color: #333;
 }
 
+.welcome-text strong {
+  color: #007bff;
+}
+
 .dropdown-arrow {
+  margin-left: 8px;
   font-size: 12px;
   color: #555;
 }
@@ -103,4 +125,45 @@
 .dropdown-item:hover {
   background-color: #f1f1f1;
   color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .Navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-section {
+    margin-bottom: 10px;
+  }
+
+  .search-bar input {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .right-section {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .switch-company-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .user-dropdown {
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    top: 60px;
+  }
+
+  .dropdown-item {
+    padding: 8px 15px;
+  }
 }

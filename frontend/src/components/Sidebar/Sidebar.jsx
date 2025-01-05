@@ -98,7 +98,7 @@ const salesData = [
 const DashboardGraphs = () => {
   return (
     <div className="dashboard-graphs">
-      {/* Invoices Line Chart */}
+     
       <div className="graph-container">
         <h4 className="graph-title">Invoices</h4>
         <LineChart width={400} height={250} data={invoiceData}>
@@ -111,7 +111,6 @@ const DashboardGraphs = () => {
         </LineChart>
       </div>
 
-      {/* Sales Forecast Bar Chart */}
       <div className="graph-container">
         <h4 className="graph-title">Sales Forecast</h4>
         <BarChart width={400} height={250} data={salesData}>

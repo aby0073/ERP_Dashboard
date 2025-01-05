@@ -29,7 +29,16 @@ const Navbar = () => {
         <div className="right-section">
           <button className="switch-company-button">Switch Company</button>
           <div className="user-dropdown" onClick={toggleDropdown}>
-            <span className="dropdown-username">Oliver Miller</span>
+            <div className="user-info">
+              <img
+                src="./profile.jpeg"
+                alt="User Avatar"
+                className="user-avatar"
+              />
+              <span className="welcome-text">
+                Welcome back, <strong>Oliver!</strong>
+              </span>
+            </div>
             <span className="dropdown-arrow">▼</span>
           </div>
 
